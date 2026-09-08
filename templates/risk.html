@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nearby Disaster Risk</title>
+</head>
+
+<body>
+
+    <h1>Check Nearby Disaster Risk</h1>
+
+    <p>
+        Your saved location will be used automatically.
+    </p>
+
+    <label for="radius">
+        Search radius (km):
+    </label>
+
+    <input
+        type="number"
+        id="radius"
+        value="20"
+        min="1"
+        max="1000"
+    >
+
+    <button onclick="checkRisk()">
+        Check Risk
+    </button>
+
+    <br><br>
+
+    <div id="riskResult">
+        Enter a radius and check for nearby disasters.
+    </div>
+
+    <br>
+
+    <a href="/">
+        Back to Home
+    </a>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

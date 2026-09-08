@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Location</title>
+    <title>Disaster Management</title>
 </head>
+
 <body>
 
-    <h2>My Location</h2>
+    <h1>Disaster Management System</h1>
 
-    <button onclick="getLocation()">Allow Location</button>
+    <h2>Your Location</h2>
 
-    <p id="result"></p>
+    <div id="location">
+
+        <p>
+            Latitude:
+            <span id="latitude">Not available</span>
+        </p>
+
+        <p>
+            Longitude:
+            <span id="longitude">Not available</span>
+        </p>
+
+        <p>
+            Area:
+            <span id="place_name">Not available</span>
+        </p>
+
+        <p>
+            City:
+            <span id="city">Not available</span>
+        </p>
+
+        <p>
+            District:
+            <span id="district">Not available</span>
+        </p>
+
+        <p>
+            State:
+            <span id="state">Not available</span>
+        </p>
+
+    </div>
+
+    <br>
+
+    <a href="/location">
+        Set / Update Location
+    </a>
+
+    <br><br>
+
+    <a href="/risk">
+        Check Nearby Risk
+    </a>
+
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </body>
+
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Set Location</title>
+</head>
+
+<body>
+
+    <h1>Set Your Location</h1>
+
+    <p>
+        We need your location to provide nearby
+        disaster information.
+    </p>
+
+    <button onclick="getLocation()">
+        Allow Location Access
+    </button>
+
+    <br><br>
+
+    <div id="result">
+        Location not selected.
+    </div>
+
+    <br>
+
+    <a href="/">
+        Back to Home
+    </a>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

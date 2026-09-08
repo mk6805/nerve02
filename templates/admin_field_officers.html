@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Field Officer Approvals</title>
+</head>
+
+<body>
+
+    <h1>Field Officer Applications</h1>
+
+    {% if pending_officers %}
+
+        {% for officer in pending_officers %}
+
+            <div>
+
+                <h3>{{ officer.name }}</h3>
+
+                <p>
+                    Email: {{ officer.email }}
+                </p>
+
+                <p>
+                    Status: Pending Approval
+                </p>
+
+                <!-- APPROVE -->
+                <form
+                    method="POST"
+                    action="{{ url_for(
+                        'main.approve_field_officer',
+                        user_id=officer.id
+                    ) }}"
+                    style="display:inline;"
+                >
+
+                    <button type="submit">
+                        Approve
+                    </button>
+
+                </form>
+
+
+                <!-- REJECT -->
+                <form
+                    method="POST"
+                    action="{{ url_for(
+                        'main.reject_field_officer',
+                        user_id=officer.id
+                    ) }}"
+                    style="display:inline;"
+                >
+
+                    <button type="submit">
+                        Reject
+                    </button>
+
+                </form>
+
+            </div>
+
+            <hr>
+
+        {% endfor %}
+
+    {% else %}
+
+        <p>No pending Field Officer applications.</p>
+
+    {% endif %}
+
+</body>
+</html>

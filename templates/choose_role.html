@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Role</title>
+</head>
+
+<body>
+
+    <h1>Welcome, {{ session["name"] }}</h1>
+
+    <h2>How are you logging in?</h2>
+
+    <form method="POST" action="{{ url_for('main.select_role') }}">
+
+        <button type="submit" name="role" value="user">
+            Continue as User
+        </button>
+
+        <button type="submit" name="role" value="field_officer">
+            Continue as Field Officer
+        </button>
+
+    </form>
+
+</body>
+</html>
