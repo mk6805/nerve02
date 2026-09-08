@@ -1,0 +1,23 @@
+# Python virtual environment
+mvenv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment variables / secrets
+.env
+
+# Large GIS raster files
+*.tif
+*.tiff
+
+# Large image/data files
+*.png
+*.csv
+
+# Large reports
+*.pdf
+
+# Generated weather inventory
+nwdp_weather_inventory.json
